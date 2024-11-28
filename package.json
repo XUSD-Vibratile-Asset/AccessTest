@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npx hardhat compile ",
-    "access": "npx hardhat roles 0xCB13Ca54A9744aFA2586E6232b94a58cF9B5E25C --network pulsechain",
+    "accessTest": "npx hardhat roles 0xCB13Ca54A9744aFA2586E6232b94a58cF9B5E25C --network pulsechain",
     "coverage": "npx hardhat coverage",
     "deploy": "npx hardhat run scripts/console.ts",
     "lint": "npx prettier --config ./.prettierrc.json --check . && npx eslint --no-error-on-unmatched-pattern \"**/*.{ts,tsx}\"",

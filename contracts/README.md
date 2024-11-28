@@ -17,6 +17,6 @@ npx hardhat compile
 Run Access Checker
 
 ```shell
-yarn accessTest
+yarn access
 ```
 
