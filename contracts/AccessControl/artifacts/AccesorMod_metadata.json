@@ -1,0 +1,63 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "This is an abstract base class contract that includes basic functionalities for user activation and class basis management.",
+			"kind": "dev",
+			"methods": {},
+			"title": "BaseClass",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/AccessControl/AccessorMod.sol": "AccesorMod"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/AccessControl/Access.sol": {
+			"keccak256": "0x48b45206b52ed4c23497e82d5a6defe291592ed7210e842729a8996073c0b819",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://47456db833c34e7a4600ff8441020cdb9d47bb6700333883da0289d60bbeac6a",
+				"dweb:/ipfs/QmWaQNR45pv1asdVKiBadYwiVavLjjhmZStsUA1WsL6CYv"
+			]
+		},
+		"contracts/AccessControl/AccessManager.sol": {
+			"keccak256": "0xe10f23d8640b3cbb4a340d166364eb1433f6acca601deb818cccd285fb713183",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d61cef0f1e96fbe36ccb4e744b9b8181e354679bf74a144c5c747cd884321c00",
+				"dweb:/ipfs/QmY8beaC8jkusx9E6DT3j7SSAw7rqKw6cAUJibq4CrtKAW"
+			]
+		},
+		"contracts/AccessControl/AccessorMod.sol": {
+			"keccak256": "0x53f38d08f3c79f083d54b6d16a986edac41df7df1cd50476462b7ce950f8d5e7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2f5f581b06e4e666ea3140a0c441a3e6b94d57d13039e713f056fb8f973e8953",
+				"dweb:/ipfs/QmWW9XYFXGganKABct37DLc84ciHCbkMa36Km6GABoeBAu"
+			]
+		}
+	},
+	"version": 1
+}

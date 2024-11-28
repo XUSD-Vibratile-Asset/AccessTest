@@ -1,0 +1,214 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AuthLib.Rank",
+						"name": "role",
+						"type": "uint8"
+					}
+				],
+				"name": "RoleGranted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "RoleRevoked",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					},
+					{
+						"internalType": "enum AuthLib.Rank",
+						"name": "rank",
+						"type": "uint8"
+					}
+				],
+				"name": "checkRole",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "getAccountRank",
+				"outputs": [
+					{
+						"internalType": "enum AuthLib.Rank",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					},
+					{
+						"internalType": "enum AuthLib.Rank",
+						"name": "rank",
+						"type": "uint8"
+					}
+				],
+				"name": "grantRole",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "revokeRole",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "A contract for managing role-based access control. Allows accounts to be granted or revoked roles, and checks for required ranks. This contract uses the AuthLib library for role management.",
+			"kind": "dev",
+			"methods": {
+				"checkRole(address,uint8)": {
+					"params": {
+						"account": "The address of the account to check.",
+						"rank": "The required rank to check against."
+					},
+					"returns": {
+						"_0": "True if the account holds the required rank or higher, false otherwise."
+					}
+				},
+				"constructor": {
+					"details": "Constructor that grants the contract deployer the highest role (PREATORMAXIMUS)."
+				},
+				"getAccountRank(address)": {
+					"params": {
+						"account": "The address of the account to query."
+					},
+					"returns": {
+						"_0": "The rank held by the account."
+					}
+				},
+				"grantRole(address,uint8)": {
+					"details": "Only accounts with the CONSUL or higher role can grant roles.",
+					"params": {
+						"account": "The address of the account to grant the role to.",
+						"rank": "The rank (role) to assign to the account."
+					}
+				},
+				"revokeRole(address)": {
+					"details": "Only accounts with the CONSUL or higher role can revoke roles.",
+					"params": {
+						"account": "The address of the account to revoke the role from."
+					}
+				}
+			},
+			"title": "AccessManager",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"checkRole(address,uint8)": {
+					"notice": "Checks if an account has a specific role or higher."
+				},
+				"getAccountRank(address)": {
+					"notice": "Returns the highest rank (role) assigned to an account."
+				},
+				"grantRole(address,uint8)": {
+					"notice": "Grants a specific role to an account."
+				},
+				"revokeRole(address)": {
+					"notice": "Revokes a role from a specific account."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/AccessControl/AccessManager.sol": "AccessManager"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/AccessControl/Access.sol": {
+			"keccak256": "0x48b45206b52ed4c23497e82d5a6defe291592ed7210e842729a8996073c0b819",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://47456db833c34e7a4600ff8441020cdb9d47bb6700333883da0289d60bbeac6a",
+				"dweb:/ipfs/QmWaQNR45pv1asdVKiBadYwiVavLjjhmZStsUA1WsL6CYv"
+			]
+		},
+		"contracts/AccessControl/AccessManager.sol": {
+			"keccak256": "0xe10f23d8640b3cbb4a340d166364eb1433f6acca601deb818cccd285fb713183",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d61cef0f1e96fbe36ccb4e744b9b8181e354679bf74a144c5c747cd884321c00",
+				"dweb:/ipfs/QmY8beaC8jkusx9E6DT3j7SSAw7rqKw6cAUJibq4CrtKAW"
+			]
+		}
+	},
+	"version": 1
+}

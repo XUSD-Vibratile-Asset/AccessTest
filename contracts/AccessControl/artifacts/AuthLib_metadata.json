@@ -1,0 +1,151 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "neededRole",
+						"type": "bytes32"
+					}
+				],
+				"name": "AccessControlUnauthorizedAccount",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AuthLib.Rank",
+						"name": "role",
+						"type": "uint8"
+					}
+				],
+				"name": "RoleGranted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum AuthLib.Rank",
+						"name": "role",
+						"type": "uint8"
+					}
+				],
+				"name": "RoleRevoked",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"details": "A library for managing role-based access control (RBAC) using ranks. Allows accounts to be granted or revoked roles, and checks for required ranks.",
+			"kind": "dev",
+			"methods": {
+				"Register(AuthLib.Registry storage,uint256,AuthLib.Rank)": {
+					"details": "Registers a key with a specified rank in the registry.",
+					"params": {
+						"_registry": "The registry where the key will be stored.",
+						"key": "The key to register (typically the address cast to uint256).",
+						"rank": "The rank to assign to the key."
+					}
+				},
+				"Remove(AuthLib.Registry storage,uint256)": {
+					"details": "Removes a key from the registry.",
+					"params": {
+						"_registry": "The registry from which the key will be removed.",
+						"key": "The key to remove."
+					}
+				},
+				"checkRole(AuthLib.RoleData storage,AuthLib.Rank,address)": {
+					"details": "Checks whether an account holds the required role (rank) or higher.",
+					"params": {
+						"account": "The account to check for the required rank.",
+						"requiredRank": "The minimum required rank for the account.",
+						"roleData": "The RoleData struct that holds the registry and ranks."
+					}
+				},
+				"getHighestRankForAccount(AuthLib.RoleData storage,address)": {
+					"details": "Retrieves the highest rank assigned to an account.",
+					"params": {
+						"account": "The account whose rank is being queried.",
+						"roleData": "The RoleData struct that holds the registry and ranks."
+					},
+					"returns": {
+						"_0": "The highest rank held by the account."
+					}
+				},
+				"grantRole(AuthLib.RoleData storage,address,AuthLib.Rank)": {
+					"details": "Grants a role (rank) to an account. This updates the registry and emits a RoleGranted event.",
+					"params": {
+						"account": "The account to grant the role to.",
+						"rank": "The rank to assign to the account.",
+						"roleData": "The RoleData struct that holds the registry and ranks."
+					}
+				},
+				"revokeRole(AuthLib.RoleData storage,address)": {
+					"details": "Revokes a role (rank) from an account. This updates the registry and emits a RoleRevoked event.",
+					"params": {
+						"account": "The account from which the role will be revoked.",
+						"roleData": "The RoleData struct that holds the registry and ranks."
+					}
+				}
+			},
+			"title": "AuthLib",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/AccessControl/Access.sol": "AuthLib"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/AccessControl/Access.sol": {
+			"keccak256": "0x48b45206b52ed4c23497e82d5a6defe291592ed7210e842729a8996073c0b819",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://47456db833c34e7a4600ff8441020cdb9d47bb6700333883da0289d60bbeac6a",
+				"dweb:/ipfs/QmWaQNR45pv1asdVKiBadYwiVavLjjhmZStsUA1WsL6CYv"
+			]
+		}
+	},
+	"version": 1
+}
